@@ -1,0 +1,9 @@
+One day, a <adjective> <noun> decided to learn <skill>.
+It woke up at <time_of_day> and grabbed its <object>.
+Before leaving, it shouted, "<exclamation>!"
+
+On the way, it met a <adjective2> <animal> that was <verb_ing>.
+The <animal> offered a <food> and said, "You should always <verb> before you <verb2>."
+
+Feeling <emotion>, the <noun> continued to <place>,
+where it finally became a <job> and lived <adverb> ever after.
