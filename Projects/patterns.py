@@ -40,7 +40,25 @@ class Solution:
                 print(col+1,end=" ")
             print()
 
+    def pattern7(self,n):
+        # outer loop for rows
+        for i in range(n):
+            # print leading spaces
+            for j in range(n - i - 1):
+                print(" ",end="")
+            # print stars
+            for j in range(2 * i + 1):
+                print("*",end="")
+            # print trailing spaces
+            for j in range(n - i - 1):
+                print(" ",end="")
+
+            # move to next row
+            print()
+
+
+
 # driver code
 sol = Solution()
 n = 5
-sol.pattern6(n)
+sol.pattern7(n)
