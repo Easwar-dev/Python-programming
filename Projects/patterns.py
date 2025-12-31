@@ -56,9 +56,61 @@ class Solution:
             # move to next row
             print()
 
+    def pattern8(self,n):
+        for i in range(n):
+            for j in range(i):
+                print(" ",end="")
+            for j in range(2 * n - (2 * i + 1)):
+                print("*",end="")
+            for j in range(i):
+                print(" ",end="")
+            print()
+
+    def pattern9(self,n):
+        for i in range(n):
+            # print spaces before stars
+            print(" " * (n - i - 1), end="")
+            # print stars
+            print("*" * (2 * i + 1), end="")
+            # print spaces after stars
+            print(" " * (n - i - 1))
+        for i in range(n):
+            # print spaces before stars
+            print(" " * i,end="")
+            # print stars
+            print("*" * (2 * n - (2 * i + 1)), end="")
+            # print spaces after start
+            print(" " * i)
+
+    def pattern10(self,n):
+        for i in range(2 * n):
+
+            end = i
+            if i > n: end = 2 * n - i
+
+            for j in range(end):
+                print("*",end="")
+
+            print()
+
+    def pattern11(self,n):
+        # loop over the number of rows
+        for i in range(n):
+            # loop over the number is even, start with 1
+            if i % 2 == 0:
+                start = 1
+            else:
+                start = 0
+
+            # loop to print alternating 1's and 0's
+            for j in range(i + 1):
+                print(start,end=" ")
+                # alternate between 1 and 0
+                start = 1 - start
+            print()
 
 
 # driver code
 sol = Solution()
 n = 5
-sol.pattern7(n)
+sol.pattern11(n)
