@@ -14,7 +14,7 @@ def download_video(url, save_path):
     except Exception as e:
         print(e)
 
-url = "https://www.youtube.com/watch?v=lFFZhAIrvcc"
+url = "https://youtube.com/shorts/enpMZosdcAU?si=ZcOTFQ7dqUKlRoKK"
 # Make sure your path uses forward slashes '/' or double backslashes '\\'
 save_path = "E:/C programs"
 
