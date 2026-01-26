@@ -15,6 +15,8 @@ TARGET_EVENT = pygame.USEREVENT
 
 TARGET_PADDING = 30
 
+BG_COLOR = (0, 25, 40)
+
 class Target:
     MAX_SIZE = 30
     GROWTH_RATE = 0.2
@@ -42,6 +44,15 @@ class Target:
         pygame.draw.circle(win, self.COLOR, (self.x, self.y), self.size * 0.6)
         pygame.draw.circle(win, self.SECOND_COLOR, (self.x, self.y), self.size * 0.4)
 
+def draw(win, targets):
+    win.fill(BG_COLOR)
+
+    for target in targets:
+        target.draw(win)
+
+    pygame.display.update()
+
+
 def main():
     run = True
     targets = []
@@ -59,6 +70,11 @@ def main():
                 y = random.randint(TARGET_PADDING, HEIGHT - TARGET_PADDING)
                 target = Target(x, y)
                 targets.append(target)
+
+        for target in targets:
+            target.update()
+
+        draw(WIN, targets)
 
     pygame.quit()
 
